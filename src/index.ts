@@ -1,8 +1,11 @@
 import {Endpoint, Rest} from '@vdegenne/mini-rest'
 
 interface Api {
+	get: {
+		'youtube-fullscreen': Endpoint<undefined, undefined>
+	}
 	post: {
-		ydotool: Endpoint<{input: string}, {}>
+		ydotool: Endpoint<{input: string}, undefined>
 	}
 }
 
