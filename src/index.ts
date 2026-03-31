@@ -13,9 +13,9 @@ interface Api {
 export const pyserver = new Rest<Api>('http://localhost:8005')
 
 export function ydotool(input: string) {
-	pyserver.post('ydotool', {input})
+	return pyserver.post('ydotool', {input})
 }
 
 export function run(command: string) {
-	pyserver.post('run', {command})
+	return pyserver.post('run', {command})
 }
